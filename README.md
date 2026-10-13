@@ -1,4 +1,4 @@
-# VocalLens AI
+# VanniSutra 
 
 > **Speak. Measure. Improve.**  
 > *Hackathon Track: Contrastive Speech Analytics & Temporal Flaw Grounding*
