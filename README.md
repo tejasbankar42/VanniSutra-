@@ -7,7 +7,7 @@
 
 ## 🎯 Overview
 
-**VocalLens AI** is an AI-powered speech evaluation and communication improvement platform. It helps language learners, job candidates, students, and professionals measure and elevate their speaking skills.
+**VanniSutra** is an AI-powered speech evaluation and communication improvement platform. It helps language learners, job candidates, students, and professionals measure and elevate their speaking skills.
 
 Unlike generic voice coaches that rely on arbitrary, non-deterministic LLM scoring, VocalLens AI uses a **reproducible, contrastive dual-baseline rubric**. It measures your speech against empirical distributions of **ideal exemplars** and **flawed speech**, producing deterministic scores across 8 core speech dimensions and **pinpointing exact timestamped flaws** directly on an interactive audio waveform.
 
@@ -17,7 +17,7 @@ Unlike generic voice coaches that rely on arbitrary, non-deterministic LLM scori
 
 ```
                     ┌───────────────────────────────────────────────┐
-                    │            VocalLens AI Frontend              │
+                    │           VanniSutra AI Frontend              │
                     │   (React + Vite + Tailwind + WaveSurfer.js)   │
                     └──────────────────────┬────────────────────────┘
                                            │
