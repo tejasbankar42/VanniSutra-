@@ -1,0 +1,5 @@
+{
+  "name": "VocalLens AI",
+  "description": "Contrastive Speech Analytics and Temporal Flaw Grounding Platform. Speak. Measure. Improve.",
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

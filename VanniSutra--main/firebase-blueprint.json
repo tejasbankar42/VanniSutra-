@@ -1,0 +1,368 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile data",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "photoURL": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "userId"
+      ]
+    },
+    "SpeechSession": {
+      "title": "SpeechSession",
+      "description": "Contrastive speech analysis session recorded by user",
+      "type": "object",
+      "properties": {
+        "sessionId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "filename": {
+          "type": "string"
+        },
+        "overallScore": {
+          "type": "number"
+        },
+        "band": {
+          "type": "string"
+        },
+        "wpm": {
+          "type": "number"
+        },
+        "pauseCount": {
+          "type": "number"
+        },
+        "fillerCount": {
+          "type": "number"
+        },
+        "duration": {
+          "type": "number"
+        },
+        "transcriptText": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sessionId",
+        "userId",
+        "overallScore",
+        "band"
+      ]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "Chat message in conversation with Gemini speech coach or study tutor",
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "modelUsed": {
+          "type": "string"
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "messageId",
+        "userId",
+        "role",
+        "content"
+      ]
+    },
+    "Course": {
+      "title": "Course",
+      "description": "Academic course or subject created by student in Course Library",
+      "type": "object",
+      "properties": {
+        "courseId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "resourceCount": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "courseId",
+        "userId",
+        "title"
+      ]
+    },
+    "CourseResource": {
+      "title": "CourseResource",
+      "description": "Multimodal learning resource uploaded to a course (PDF, slides, video, image, notes)",
+      "type": "object",
+      "properties": {
+        "resourceId": {
+          "type": "string"
+        },
+        "courseId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "originalFilename": {
+          "type": "string"
+        },
+        "resourceType": {
+          "type": "string"
+        },
+        "fileSize": {
+          "type": "number"
+        },
+        "fileHash": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "extractionMethod": {
+          "type": "string"
+        },
+        "pageCount": {
+          "type": "number"
+        },
+        "slideCount": {
+          "type": "number"
+        },
+        "duration": {
+          "type": "number"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceId",
+        "courseId",
+        "userId",
+        "originalFilename",
+        "resourceType",
+        "status"
+      ]
+    },
+    "CourseMaterial": {
+      "title": "CourseMaterial",
+      "description": "Multimodal course material ingested by the study companion",
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "materialType": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "summary": {
+          "type": "string"
+        },
+        "chunkCount": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "materialId",
+        "userId",
+        "title",
+        "materialType"
+      ]
+    },
+    "ConceptMastery": {
+      "title": "ConceptMastery",
+      "description": "Learner mastery state per concept tracked via Bayesian Knowledge Tracing",
+      "type": "object",
+      "properties": {
+        "conceptId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "conceptName": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "masteryScore": {
+          "type": "number"
+        },
+        "pKnown": {
+          "type": "number"
+        },
+        "attemptsCount": {
+          "type": "number"
+        },
+        "correctCount": {
+          "type": "number"
+        },
+        "lastAssessedAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "conceptId",
+        "userId",
+        "conceptName",
+        "masteryScore"
+      ]
+    },
+    "AssessmentSession": {
+      "title": "AssessmentSession",
+      "description": "Adaptive assessment or oral defense evaluation session",
+      "type": "object",
+      "properties": {
+        "assessmentId": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "assessmentType": {
+          "type": "string"
+        },
+        "score": {
+          "type": "number"
+        },
+        "feedback": {
+          "type": "string"
+        },
+        "conceptsTested": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "assessmentId",
+        "userId",
+        "title",
+        "score"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/users/{userId}/sessions/{sessionId}": {
+      "schema": "SpeechSession",
+      "description": "User speech evaluation sessions"
+    },
+    "/users/{userId}/chat_messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "User chat history with AI coach and study tutor"
+    },
+    "/users/{userId}/courses/{courseId}": {
+      "schema": "Course",
+      "description": "User courses in Course Library"
+    },
+    "/users/{userId}/courses/{courseId}/resources/{resourceId}": {
+      "schema": "CourseResource",
+      "description": "Multimodal resources uploaded to user course"
+    },
+    "/users/{userId}/course_materials/{materialId}": {
+      "schema": "CourseMaterial",
+      "description": "Course materials ingested by the user"
+    },
+    "/users/{userId}/concept_mastery/{conceptId}": {
+      "schema": "ConceptMastery",
+      "description": "Learner concept mastery tracking records"
+    },
+    "/users/{userId}/assessments/{assessmentId}": {
+      "schema": "AssessmentSession",
+      "description": "Completed adaptive assessment and oral defense sessions"
+    }
+  }
+}

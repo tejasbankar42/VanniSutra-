@@ -1,0 +1,45 @@
+{
+  "name": "vocallens-ai",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Contrastive Speech Analytics and Temporal Flaw Grounding Platform. Speak. Measure. Improve.",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build",
+    "start": "tsx server.ts",
+    "eval:benchmark": "node scripts/run_system_evaluation.mjs",
+    "benchmark": "tsx evaluation/runners/cli.ts",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "adm-zip": "^0.6.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase": "^12.19.0",
+    "groq-sdk": "^1.6.0",
+    "lucide-react": "^1.52.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^2.4.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^3.10.1",
+    "wavesurfer.js": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.12",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
